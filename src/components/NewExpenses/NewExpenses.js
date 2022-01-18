@@ -3,10 +3,15 @@ import React from 'react'
 import './NewExpense.css'
 import ExpenseForm from './ExpenseForm'
 
-const NewExpenses = () => {
+const NewExpenses = (props) => {
+    const saveNewExpenseHandler = (expense) => {
+        console.log(expense)
+        props.onAddNewExpense()
+    }
+
     return (
         <div className="new-expense">
-            <ExpenseForm />
+            <ExpenseForm onSaveNewExpense={saveNewExpenseHandler}/>
         </div>
     )
 }
