@@ -1,12 +1,10 @@
 import React from 'react'
-
 import './NewExpense.css'
 import ExpenseForm from './ExpenseForm'
 
 const NewExpenses = (props) => {
     const saveNewExpenseHandler = (expense) => {
-        console.log(expense)
-        props.onAddNewExpense()
+        props.onAddNewExpense(expense)
     }
 
     return (
