@@ -22,6 +22,7 @@ const ExpenseForm = (props) => {
     const addExpenseHandler = (event) => {
        event.preventDefault()
        const expenseData = {
+           id: Math.random(),
            title: title, 
            amount: amount,
            date: new Date(date)
